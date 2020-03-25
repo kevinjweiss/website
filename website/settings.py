@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '8+f956ac5=@!49wx%ats_yawjsisjt%ymp_6lggse#gs27+36&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 # SECURITY SETTINGS per python manage.py check --deploy
 if not DEBUG:
