@@ -35,7 +35,7 @@ if not DEBUG:
     CSRF_COOKIE_SECURE = True
     SECURE_REFERRER_POLICY = 'same-origin'
 
-ALLOWED_HOSTS = ['floating-dusk-94418.herokuapp.com']
+ALLOWED_HOSTS = ['floating-dusk-94418.herokuapp.com', 'www.kevinjweiss.com']
 
 
 # Application definition
