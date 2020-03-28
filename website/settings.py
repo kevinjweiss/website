@@ -34,8 +34,8 @@ if not DEBUG:
     # SECURE_HSTS_SECONDS = 30
     # SECURE_HSTS_INCLUDE_SUBDOMAINS = True
     # SECURE_HSTS_PRELOAD = True
-    SECURE_SSL_REDIRECT = True
-    SECURE_REFERRER_POLICY = 'same-origin'
+    # SECURE_SSL_REDIRECT = True
+    # SECURE_REFERRER_POLICY = 'same-origin'
 
 ALLOWED_HOSTS = ['floating-dusk-94418.herokuapp.com', 'www.kevinjweiss.com', '127.0.0.1']
 
