@@ -36,9 +36,6 @@ if not DEBUG:
     SECURE_SSL_REDIRECT = True
     SECURE_REFERRER_POLICY = 'same-origin'
 
-    # Heroku: Update database configuration from $DATABASE_URL.
-    DATABASES['default'] = dj_database_url.config(conn_max_age=600)
-
 ALLOWED_HOSTS = ['floating-dusk-94418.herokuapp.com', 'www.kevinjweiss.com', '127.0.0.1']
 
 # Application definition
@@ -143,3 +140,6 @@ STATIC_URL = '/static/'
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+# Heroku: Update database configuration from $DATABASE_URL.
+DATABASES['default'] = dj_database_url.config(conn_max_age=600)
