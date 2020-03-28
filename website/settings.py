@@ -23,18 +23,18 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '8+f956ac5=@!49wx%ats_yawjsisjt%ymp_6lggse#gs27+36&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 # SECURITY SETTINGS per python manage.py check --deploy
 if not DEBUG:
-    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+    # SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True
-    SECURE_HSTS_SECONDS = 31536000
-    SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-    SECURE_HSTS_PRELOAD = True
-    SECURE_SSL_REDIRECT = True
-    SECURE_REFERRER_POLICY = 'same-origin'
+    # SECURE_HSTS_SECONDS = 31536000
+    # SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+    # SECURE_HSTS_PRELOAD = True
+    # SECURE_SSL_REDIRECT = True
+    # SECURE_REFERRER_POLICY = 'same-origin'
 
 ALLOWED_HOSTS = ['floating-dusk-94418.herokuapp.com', 'www.kevinjweiss.com']
 
