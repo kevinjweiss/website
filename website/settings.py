@@ -144,3 +144,10 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Heroku: Update database configuration from $DATABASE_URL.
 DATABASES['default'] = dj_database_url.config(conn_max_age=600)
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'postgresql_psycopg2',
+        'NAME': dj_database_url.config(conn_max_age=600)
+    }
+}
