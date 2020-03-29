@@ -28,6 +28,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY',
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
 # SECURITY SETTINGS per python manage.py check --deploy
+<<<<<<< HEAD
 # if not DEBUG:
 # SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 # SESSION_COOKIE_SECURE = True
@@ -37,6 +38,17 @@ DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 # SECURE_HSTS_PRELOAD = True
 # SECURE_SSL_REDIRECT = True
 # SECURE_REFERRER_POLICY = 'same-origin'
+=======
+if not DEBUG:
+    # SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+    # SESSION_COOKIE_SECURE = True
+    # CSRF_COOKIE_SECURE = True
+    # SECURE_HSTS_SECONDS = 30
+    # SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+    # SECURE_HSTS_PRELOAD = True
+    # SECURE_SSL_REDIRECT = True
+    # SECURE_REFERRER_POLICY = 'same-origin'
+>>>>>>> master
 
 ALLOWED_HOSTS = ['floating-dusk-94418.herokuapp.com', 'www.kevinjweiss.com', '127.0.0.1']
 
@@ -144,6 +156,12 @@ STATIC_URL = '/static/'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Heroku: Update database configuration from $DATABASE_URL.
+<<<<<<< HEAD
 # DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=False)
 
 django_heroku.settings(locals())
+=======
+# DATABASES['default'] = dj_database_url.config(conn_max_age=600)
+
+django_heroku.settings(locals())
+>>>>>>> master
