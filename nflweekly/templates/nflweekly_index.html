@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+<h1>Weekly NFL Projections</h1>
+<div class="row">
+{% for week in weeks %}
+    <div class="col-md-4">
+        <div class="card mb-2">
+            <img class="card-img-top" src={{ week.image.url }}>   
+            <div class="card-body">
+                <a href="{% url 'weekly_detail' week.pk %}"
+                   class="btn btn-primary">
+                    Week {{ week.week}} {{ week.year }}
+                </a>
+            </div>
+              
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
