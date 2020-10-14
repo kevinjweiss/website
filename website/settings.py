@@ -48,9 +48,17 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'cloudinary_storage',
+    'cloudinary',
     'website',
     'nflweekly',
 ]
+
+CLOUDINARY_STORAGE = {
+             'CLOUD_NAME': 'ho7801rt6',
+             'API_KEY': '953334131978816',
+             'API_SECRET': 'WaLIOfnodyZk0vgbp3QsryVQ71M'
+            }
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -142,4 +150,6 @@ DATABASES['default'].update(db_from_env)
 
 # Specify root for Media Files
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+#MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+DEFAULT_FILE_STORAGE='cloudinary_storage.storage.MediaCloudinaryStorage'
